@@ -7,7 +7,7 @@ const fugaz = Fugaz_One({ subsets: ["latin"], weight: "400" });
 const Navbar = () => {
   return (
     <>
-      <nav className="px-9 py-7 flex justify-between h-20 items-center">
+      <nav className="px-9 py-7 flex justify-between h-20 items-center bg-white">
         <div>
           <ol className="flex gap-7 text-sm font-semibold justify-center">
             <Link href="#">

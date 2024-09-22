@@ -3,9 +3,8 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import localFont from "next/font/local";
 import Footer from "./components/Footer";
-import Hero from "./components/Hero";
 
-const myFont = localFont({ src: "fonts/SF.otf" });
+const SF = localFont({ src: "fonts/SF.otf" });
 
 export const metadata: Metadata = {
   title: "ByteBoutique",
@@ -19,11 +18,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${myFont.className}`}>
-        <Navbar />
-        <Hero />
-        <Footer />
-        {children}
+      <body className={`${SF.className}`}>
+        <main className="flex flex-col justify-between min-h-screen">
+          <Navbar />
+          {children}
+          <Footer />
+        </main>
       </body>
     </html>
   );
