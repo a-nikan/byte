@@ -26,8 +26,8 @@ const items = [
 
 // Define an array with different src and alt for Main carousel Images
 const mainItems = [
-  { src: "/images/image2.webp", alt: "image2" },
-  { src: "/images/image3.jpg", alt: "image3" },
+  { src: "/images/HP_Hero_Intro_QCUEB_1440x810_x2.webp", alt: "image2" },
+  { src: "/images/gettyimages-1023153404-2048x2048__2.jpg", alt: "image3" },
   { src: "/images/image4.webp", alt: "image4" },
 ];
 

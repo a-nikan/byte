@@ -3,6 +3,33 @@ import Link from "next/link";
 import { MainCarousel, SecondCarousel } from "./Carousel";
 import ProductCard from "./ProductCard";
 
+const productCardItems = [
+  {
+    title: "Bose QuietComfort Earbuds",
+    img: "/images/SF_QCEB25_WHITE_PDP_ECOMM-GALLERY_IMG-1.webp",
+    price: "$179.00",
+    color: ["#000000", "#c5c6e1", "#ffffff"],
+  },
+  {
+    title: "Bose QuietComfort Ultra Headphones",
+    img: "/images/QCUH_LunarBlue_Wired_400x300_x.webp",
+    price: "$429.00",
+    color: ["#000000", "#eee8e5", "#203449", "#d3d3d2", "#928982"],
+  },
+  {
+    title: "Bose QuietComfort Headphones",
+    img: "/images/QCHLE25_ChilledLilac_001_RightFacing_RGB.webp",
+    price: "$349.00",
+    color: ["#000000", "#eee8e5", "#486e8a", "#928982", "#c5c6e1", "#a2c2d9"],
+  },
+  {
+    title: "Bose Ultra Open Earbuds",
+    img: "/images/SF_PDP_GALLERY_AIRFLYPRO_BLACK_QCEU_BLACK-1.webp",
+    price: "$353.99",
+    color: [],
+  },
+];
+
 const SF = localFont({ src: "../fonts/SF.otf" });
 2;
 const bose = localFont({
@@ -41,15 +68,20 @@ const Hero = () => {
       <section>
         <div>
           <h1
-            className={`${bose.className} text-6xl font-extrabold mt-24 ml-20  subpixel-antialiased`}
+            className={`${bose.className} text-6xl font-extrabold mt-24 mx-24 subpixel-antialiased`}
           >
             Trending products
           </h1>
-          <div className=" ml-20 mt-5 flex gap-1">
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
+          <div className="mx-20 mt-5 flex gap-1 items-center flex-wrap justify-center">
+            {productCardItems.map((item, index) => (
+              <ProductCard
+                key={index}
+                title={item.title}
+                img={item.img}
+                price={item.price}
+                color={item.color}
+              />
+            ))}
           </div>
         </div>
       </section>
