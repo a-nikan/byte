@@ -10,26 +10,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-
-// Define an array with different titles and addresses for Second carousel
-const items = [
-  { title: "Earbuds", address: "/earbuds" },
-  { title: "Headphones", address: "/headphones" },
-  { title: "Speakers", address: "/speakers" },
-  { title: "Smartwatch", address: "/smartwatch" },
-  { title: "Camera", address: "/camera" },
-  { title: "Laptop", address: "/laptop" },
-  { title: "Tablet", address: "/tablet" },
-  { title: "Phone", address: "/phone" },
-  { title: "Gaming Console", address: "/gaming-console" },
-];
-
-// Define an array with different src and alt for Main carousel Images
-const mainItems = [
-  { src: "/images/HP_Hero_Intro_QCUEB_1440x810_x2.webp", alt: "image2" },
-  { src: "/images/gettyimages-1023153404-2048x2048__2.jpg", alt: "image3" },
-  { src: "/images/image4.webp", alt: "image4" },
-];
+import { heroCarouselItems, secondCarouselItems } from "./constants";
 
 export function MainCarousel() {
   const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay()]);
@@ -37,7 +18,7 @@ export function MainCarousel() {
   return (
     <div className="overflow-hidden absolute -z-10 w-full top-0" ref={emblaRef}>
       <div className="flex h-[700px]">
-        {mainItems.map((item, index) => (
+        {heroCarouselItems.map((item, index) => (
           <Image
             key={index}
             src={item.src}
@@ -56,7 +37,7 @@ export function SecondCarousel() {
   return (
     <Carousel className="overflow-hidden h-[190px]">
       <CarouselContent className="flex h-[190px] gap-1 mt-28">
-        {items.map((item, index) => (
+        {secondCarouselItems.map((item, index) => (
           <CarouselCard key={index} title={item.title} address={item.address} />
         ))}
       </CarouselContent>
