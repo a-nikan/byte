@@ -12,6 +12,7 @@ const ProductCard = (props: Props) => {
   return (
     <div className="h-[530px] w-[330px] bg-gray-100 subpixel-antialiased hover:bg-white hover:shadow-lg cursor-pointer flex-col">
       <Image
+        quality={100}
         className="pt-20"
         alt={props.title}
         height={300}

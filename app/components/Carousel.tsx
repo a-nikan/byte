@@ -20,6 +20,7 @@ export function MainCarousel() {
       <div className="flex h-[700px]">
         {heroCarouselItems.map((item, index) => (
           <Image
+            quality={100}
             key={index}
             src={item.src}
             alt={item.alt}
