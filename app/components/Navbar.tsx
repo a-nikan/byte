@@ -35,13 +35,26 @@ const Navbar = () => {
         <div className="flex gap-5">
           <Image src="/icons/search.svg" alt="search" width={28} height={28} />
           <Image
+            className="w-auto h-[24px]"
             src="/icons/profile.svg"
             alt="profile"
             width={24}
             height={24}
           />
-          <Image src="/icons/heart.svg" alt="wish" width={24} height={24} />
-          <Image src="/icons/cart.svg" alt="cart" width={24} height={24} />
+          <Image
+            className="w-auto h-[24px]"
+            src="/icons/heart.svg"
+            alt="wish"
+            width={24}
+            height={24}
+          />
+          <Image
+            className="w-auto h-[24px]"
+            src="/icons/cart.svg"
+            alt="cart"
+            width={24}
+            height={24}
+          />
         </div>
       </nav>
     </>

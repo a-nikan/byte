@@ -42,3 +42,48 @@ export const heroCarouselItems = [
   { src: "/images/gettyimages-1023153404-2048x2048__2.jpg", alt: "image3" },
   { src: "/images/image4.webp", alt: "image4" },
 ];
+
+export const thirdCarouselItems = [
+  {
+    src: "/images/CTP-49552_WHAT_IS_PSS_SF_1.webp",
+    alt: "image1",
+    title: "What is Personal Surround Sound?",
+    paragraph: "Take your listening to the next level.",
+    mainColor: "white",
+    btnTextColor: "black",
+    left: "2.5rem",
+    top: "11rem",
+  },
+  {
+    src: "/images/SF_UOE-Q3_HP-TAKEOVER-PANEL-7.jpeg",
+    alt: "image2",
+    title: "“Music is a part of my lifestyle.”",
+    paragraph: "– Lisa, Music Artist",
+    mainColor: "#e4a9ff",
+    btnTextColor: "#4024a7",
+    left: "2.5rem",
+    top: "18rem",
+  },
+  {
+    src: "/images/CTP-48214_NME_C24_Release_CollabsHub.webp",
+    alt: "image3",
+    title: "A generation-defining album",
+    paragraph:
+      "Bose x NME present C24: the next generation of music, featuring tracks from major up-and-comers.",
+    mainColor: "white",
+    btnTextColor: "black",
+    left: "2.5rem",
+    top: "18rem",
+  },
+  {
+    src: "/images/SLMPS_JohnSummit_RT3_Expanded.webp",
+    alt: "image4",
+    title: "Unleashing the energy",
+    paragraph:
+      "DJ & Producer John Summit on how the new SoundLink Max Speaker turns up the vibe.",
+    mainColor: "white",
+    btnTextColor: "black",
+    left: "2.5rem",
+    top: "18rem",
+  },
+];

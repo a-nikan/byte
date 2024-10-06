@@ -4,6 +4,7 @@ import ProductCard from "./ProductCard";
 import Image from "next/image";
 import { productCardItems } from "./constants";
 import localFont from "next/font/local";
+import ThirdCarousel from "./ThirdCarousel";
 
 // Fonts
 
@@ -92,73 +93,89 @@ const Main = () => {
           </Link>
         </div>
         {/* Fourth Section */}
-        <div className="flex justify-center">
-          <div className="flex justify-center h-dvh gap-6 mt-6 relative w-[1350px]">
-            <div className="relative h-dvh w-[670px]">
-              <Image
-                className="-z-10"
-                quality={100}
-                src="/images/CREA-1086_UOEB24_Black_CentralCee_0297.jpeg"
-                alt="CREA-1086_UOEB24_Black_CentralCee_0297"
-                fill
-                style={{ objectFit: "cover" }}
-              />
-              <p
-                className={`${SF.className}  absolute text-[#c2ffc5] text-[22px] pb-8 -mt-5 subpixel-antialiased left-8 bottom-[70px]`}
-              >
-                Listen like Central Cee.
-              </p>
-              <h1
-                className={`${bose.className} absolute font-black text-[#c2ffc5] pt-[500px] lg:text-[60px] md:text-[80px] text-[60px] subpixel-antialiased left-8 bottom-36`}
-              >
-                Turn up without tuning out
-              </h1>{" "}
-              <p
-                className={`${SF.className}  absolute text-[#c2ffc5] text-[18px] pb-8 -mt-5 subpixel-antialiased left-8 bottom-48`}
-              >
-                ULTRA OPEN EARBUDS
-              </p>
-              <Link href="#">
-                <div className="absolute bg-[#c2ffc5] rounded-[2px] h-[50px] w-32 flex items-center left-8 bottom-8 ">
-                  <p className=" text-[#007058] p font-[700] mx-auto subpixel-antialiased">
-                    BUY NOW
-                  </p>
-                </div>
-              </Link>
-            </div>
-            <div className="relative h-dvh w-[670px] ">
-              <Image
-                className="-z-10"
-                quality={100}
-                src="/images/SSB_Inbox_Message_375x375_x2_2.jpeg"
-                fill
-                alt="SSB_Inbox_Message_375x375_x2_2"
-                style={{ objectFit: "cover" }}
-              />
-              <p
-                className={`${SF.className}  absolute text-white text-[22px] pb-8 -mt-5 subpixel-antialiased left-8 bottom-[70px]`}
-              >
-                Pair with Ultra Open Earbuds for Personal Surround Sound.
-              </p>
-              <h1
-                className={`${bose.className} absolute font-black text-white pt-[500px] lg:text-[60px] md:text-[80px] text-[60px] subpixel-antialiased left-8 bottom-36`}
-              >
-                Open-ear immersion
-              </h1>{" "}
-              <p
-                className={`${SF.className}  absolute text-white text-[18px] pb-8 -mt-5 subpixel-antialiased left-8 bottom-48`}
-              >
-                NEW SMART SOUNDBAR
-              </p>
-              <Link href="#">
-                <div className="absolute bg-white rounded-[2px] h-[50px] w-32 flex items-center left-8 bottom-8 ">
-                  <p className=" text-black p font-[700] mx-auto subpixel-antialiased">
-                    BUY NOW
-                  </p>
-                </div>
-              </Link>
+        <section>
+          <div className="flex justify-center">
+            <div className="flex justify-center h-dvh gap-6 mt-6 relative w-[1350px]">
+              <div className="relative h-dvh w-[670px]">
+                <Image
+                  className="-z-10"
+                  quality={100}
+                  src="/images/CREA-1086_UOEB24_Black_CentralCee_0297.jpeg"
+                  alt="CREA-1086_UOEB24_Black_CentralCee_0297"
+                  fill
+                  style={{ objectFit: "cover" }}
+                />
+                <p
+                  className={`${SF.className}  absolute text-[#c2ffc5] text-[22px] pb-8 -mt-5 subpixel-antialiased left-8 bottom-[70px]`}
+                >
+                  Listen like Central Cee.
+                </p>
+                <h1
+                  className={`${bose.className} absolute font-black text-[#c2ffc5] pt-[500px] lg:text-[60px] md:text-[80px] text-[60px] subpixel-antialiased left-8 bottom-36`}
+                >
+                  Turn up without tuning out
+                </h1>{" "}
+                <p
+                  className={`${SF.className}  absolute text-[#c2ffc5] text-[18px] pb-8 -mt-5 subpixel-antialiased left-8 bottom-48`}
+                >
+                  ULTRA OPEN EARBUDS
+                </p>
+                <Link href="#">
+                  <div className="absolute bg-[#c2ffc5] rounded-[2px] h-[50px] w-32 flex items-center left-8 bottom-8 ">
+                    <p className=" text-[#007058] p font-[700] mx-auto subpixel-antialiased">
+                      BUY NOW
+                    </p>
+                  </div>
+                </Link>
+              </div>
+              <div className="relative h-dvh w-[670px]">
+                <Image
+                  className="-z-10"
+                  quality={100}
+                  src="/images/SSB_Inbox_Message_375x375_x2_2.jpeg"
+                  fill
+                  alt="SSB_Inbox_Message_375x375_x2_2"
+                  style={{ objectFit: "cover" }}
+                />
+                <p
+                  className={`${SF.className}  absolute text-white text-[22px] pb-8 -mt-5 subpixel-antialiased left-8 bottom-[70px]`}
+                >
+                  Pair with Ultra Open Earbuds for Personal Surround Sound.
+                </p>
+                <h1
+                  className={`${bose.className} absolute font-black text-white pt-[500px] lg:text-[60px] md:text-[80px] text-[60px] subpixel-antialiased left-8 bottom-36`}
+                >
+                  Open-ear immersion
+                </h1>{" "}
+                <p
+                  className={`${SF.className}  absolute text-white text-[18px] pb-8 -mt-5 subpixel-antialiased left-8 bottom-48`}
+                >
+                  NEW SMART SOUNDBAR
+                </p>
+                <Link href="#">
+                  <div className="absolute bg-white rounded-[2px] h-[50px] w-32 flex items-center left-8 bottom-8 ">
+                    <p className=" text-black p font-[700] mx-auto subpixel-antialiased">
+                      BUY NOW
+                    </p>
+                  </div>
+                </Link>
+              </div>
             </div>
           </div>
+        </section>
+      </section>
+      <section>
+        {/* Section 4 */}
+        <div className="mt-36">
+          <div className="pl-[88px] pr-20 mb-9  ">
+            <h1 className={`${bose.className} text-6xl mb-3 text-neutral-900`}>
+              Bose Stories
+            </h1>
+            <p className={`${SF.className} text-[16px]`}>
+              The people & stories that excites us.
+            </p>
+          </div>
+          <ThirdCarousel />
         </div>
       </section>
     </main>
