@@ -7,6 +7,7 @@ import localFont from "next/font/local";
 import ThirdCarousel from "./ThirdCarousel";
 import { whyBuyCardItems } from "./constants";
 import WhyBuyCards from "./WhyBuyCards";
+import { IoIosArrowRoundForward } from "react-icons/io";
 
 // Fonts
 
@@ -15,6 +16,7 @@ const bose = localFont({
   src: "../fonts/Bose-HeadlineBold.woff2",
   weight: "900",
 });
+const boseText = localFont({ src: "../fonts/BoseText-Medium.woff2" });
 
 const Main = () => {
   return (
@@ -239,6 +241,79 @@ const Main = () => {
               LEARN MORE &gt;
             </p>
           </Link>
+        </div>
+        <div className="mt-48 gap-7 flex flex-col justify-center mx-auto items-center max-w-[1024px]">
+          <h1 className={`${bose.className} text-[4rem] `}>
+            Get 10% off your first purchase*
+          </h1>
+          <h2 className={`${boseText.className} text-2xl`}>
+            Three steps to saving:
+          </h2>
+          <ol className="flex flex-wrap gap-4 min-w-[768px]">
+            <li className="flex justify-center items-center gap-2">
+              <div
+                className={`flex items-center text-[1.125rem] justify-center w-[27px] h-[27px] bg-black text-white rounded-full ${boseText.className}`}
+              >
+                1
+              </div>
+              <span className={`${boseText.className} text-[.875rem]`}>
+                Sign up to receive ByteBoutique emails and communications below
+              </span>
+            </li>
+            <li className="flex justify-center items-center gap-2">
+              <div
+                className={`flex items-center text-[1.125rem] justify-center w-[27px] h-[27px] bg-black text-white rounded-full ${boseText.className}`}
+              >
+                2
+              </div>
+              <span className={`${boseText.className} text-[.875rem]`}>
+                Become a My ByteBoutique member
+              </span>
+            </li>
+            <li className="flex justify-center items-center gap-2">
+              <div
+                className={`flex items-center text-[1.125rem] justify-center w-[27px] h-[27px] bg-black text-white rounded-full ${boseText.className}`}
+              >
+                3
+              </div>
+              <span className={`${boseText.className} text-[.875rem]`}>
+                Receive an email with your 10% coupon
+              </span>
+            </li>
+          </ol>
+          <div>
+            <form className="flex gap-6 justify-center items-center">
+              <div className="relative w-[480px]">
+                <input
+                  type="email"
+                  id="email"
+                  className="w-full h-[3.2rem] border-b-2 border-black bg-transparent focus:outline-none peer"
+                />
+                <label
+                  htmlFor="email"
+                  className={`${boseText.className} absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-900 transition-all duration-400 peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:top-0 peer-focus:text-sm peer-focus:text-neutral-600`}
+                >
+                  Email address
+                </label>
+              </div>
+              <button
+                type="submit"
+                className="bg-white flex justify-center items-center gap-2 border border-black h-[3.2rem] w-32 rounded-[2px]"
+              >
+                <span className={`${boseText.className}`}>SIGN UP </span>
+                <span>
+                  <IoIosArrowRoundForward size="1.5rem" />
+                </span>
+              </button>
+            </form>
+          </div>
+          <p
+            className={`${boseText.className} text-xs font-semibold mt-10 w-[700px] mb-36`}
+          >
+            *The coupon code will be sent via email. Offer valid for full-priced
+            products with a maximum discount of $100. Please see email for full
+            terms and conditions of this offer.
+          </p>
         </div>
       </section>
     </main>
