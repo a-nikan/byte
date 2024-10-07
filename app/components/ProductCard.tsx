@@ -25,7 +25,8 @@ const ProductCard = (props: Props) => {
         {props.color.map((item, index) => (
           <div
             key={index}
-            className={`bg-[${item}] h-7 w-7 rounded-full border border-gray-400`}
+            className="h-7 w-7 rounded-full border border-gray-400"
+            style={{ backgroundColor: item }}
           ></div>
         ))}
       </div>

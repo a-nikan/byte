@@ -5,6 +5,8 @@ import Image from "next/image";
 import { productCardItems } from "./constants";
 import localFont from "next/font/local";
 import ThirdCarousel from "./ThirdCarousel";
+import { whyBuyCardItems } from "./constants";
+import WhyBuyCards from "./WhyBuyCards";
 
 // Fonts
 
@@ -165,7 +167,6 @@ const Main = () => {
         </section>
       </section>
       <section>
-        {/* Section 4 */}
         <div className="mt-36">
           <div className="pl-[88px] pr-20 mb-9  ">
             <h1 className={`${bose.className} text-6xl mb-3 text-neutral-900`}>
@@ -176,6 +177,68 @@ const Main = () => {
             </p>
           </div>
           <ThirdCarousel />
+        </div>
+      </section>
+      {/* Section 4 */}
+      <section>
+        <div className="relative mx-auto w-[1350px] h-screen overflow-hidden mt-36">
+          <div className="flex flex-col relative gap-6 left-[2.5rem] top-[30rem]">
+            <h1 className={`${bose.className} text-6xl text-white`}>
+              Bose Automotive
+            </h1>
+            <p className={`${SF.className} text-2xl text-white`}>
+              True believers in the power of sound
+            </p>
+            <Link href="#">
+              <div className="rounded-[1px] h-[48px] w-[151px] flex items-center bg-white">
+                <p className="tracking-widest text-[15.5px] text-black font-bold mx-auto subpixel-antialiased">
+                  LEARN MORE
+                </p>
+              </div>
+            </Link>
+          </div>
+          <Image
+            className="relative object-cover -z-10"
+            src="/images/15_shot10_porsche_myron_07153_v2.webp"
+            alt="15_shot10_porsche_myron_07153_v2"
+            fill
+            quality={100}
+          />
+        </div>
+      </section>
+      {/* Section 5 */}
+      <section>
+        <div className="mt-32">
+          <h1
+            className={`${bose.className} text-6xl text-neutral-950 pl-[88px] mb-14`}
+          >
+            Why buy from ByteBoutiqe
+          </h1>
+          <div className="flex w-[1200px] ml-20 gap-14 justify-between">
+            {whyBuyCardItems.map((item, index) => (
+              <WhyBuyCards
+                key={index}
+                Icon={item.Icon}
+                description={item.description}
+                title={item.title}
+                fwBtn={item.fwBtn}
+              />
+            ))}
+          </div>
+        </div>
+        <div className="mt-28 ml-20">
+          <p className={`${SF.className} font-bold text-[18.5px] w-[60%]`}>
+            Important recall notice regarding certain Acoustimass, Lifestyle,
+            and Companion system bass modules manufactured prior to April 1,
+            2006.
+          </p>
+          <Link href="#">
+            <p
+              className={`${SF.className} text-[16] font-bold text-[#1669FF] tracking-widest mt-10`}
+            >
+              LEARN MORE &gt;
+            </p>
+          </Link>
         </div>
       </section>
     </main>

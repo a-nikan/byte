@@ -1,3 +1,8 @@
+import { MdOutlineCalendarMonth } from "react-icons/md";
+import { TbTruckDelivery } from "react-icons/tb";
+import { PiHandCoinsLight } from "react-icons/pi";
+import { CgProfile } from "react-icons/cg";
+
 export const productCardItems = [
   {
     title: "Bose QuietComfort Earbuds",
@@ -85,5 +90,37 @@ export const thirdCarouselItems = [
     btnTextColor: "black",
     left: "2.5rem",
     top: "18rem",
+  },
+];
+
+export const whyBuyCardItems = [
+  {
+    id: 1,
+    title: "90-day return policy",
+    description: "Try it for 90 days to make sure it’s right for you.",
+    Icon: MdOutlineCalendarMonth,
+    fwBtn: "Learn More >",
+  },
+  {
+    id: 2,
+    title: "Price match promise",
+    description: "Shop confidently. We’ll match a lower price.",
+    Icon: PiHandCoinsLight,
+    fwBtn: "Terms & Conditions >",
+  },
+  {
+    id: 3,
+    title: "Complimentary shipping & returns",
+    description: "On in-stock orders of $49 or more.",
+    Icon: TbTruckDelivery,
+    fwBtn: "Learn More >",
+  },
+  {
+    id: 4,
+    title: "My ByteBoutique perks",
+    description:
+      "My ByteBoutiqe members get access to exclusive experiences, offers, and more.",
+    Icon: CgProfile,
+    fwBtn: "Learn More >",
   },
 ];
