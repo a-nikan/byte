@@ -34,12 +34,11 @@ export const secondCarouselItems = [
   { title: "Earbuds", address: "/earbuds" },
   { title: "Headphones", address: "/headphones" },
   { title: "Speakers", address: "/speakers" },
-  { title: "Smartwatch", address: "/smartwatch" },
-  { title: "Camera", address: "/camera" },
-  { title: "Laptop", address: "/laptop" },
-  { title: "Tablet", address: "/tablet" },
-  { title: "Phone", address: "/phone" },
-  { title: "Gaming Console", address: "/gaming-console" },
+  { title: "Home Theater", address: "/home-theater" },
+  { title: "Portable PA", address: "/portable-pa" },
+  { title: "Sets", address: "/sets" },
+  { title: "Accessories", address: "/accessories" },
+  { title: "Refurbished", address: "/refurbished" },
 ];
 
 export const heroCarouselItems = [

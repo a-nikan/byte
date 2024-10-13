@@ -36,14 +36,14 @@ export function MainCarousel() {
 
 export function SecondCarousel() {
   return (
-    <Carousel className="overflow-hidden h-[190px]">
-      <CarouselContent className="flex h-[190px] gap-1 mt-28">
+    <Carousel className="overflow-hidden h-[190px] mt-[182px]">
+      <CarouselContent className="flex gap-1">
         {secondCarouselItems.map((item, index) => (
           <CarouselCard key={index} title={item.title} address={item.address} />
         ))}
       </CarouselContent>
-      <CarouselPrevious className="ml-20 mt-14 h-12 w-12" />
-      <CarouselNext className="mr-20 mt-14 h-12 w-12" />
+      <CarouselPrevious className="ml-20 -mt-[52px] h-12 w-12 bg-white hover:bg-white" />
+      <CarouselNext className="mr-20 -mt-[52px] h-12 w-12 bg-white hover:bg-white" />
     </Carousel>
   );
 }

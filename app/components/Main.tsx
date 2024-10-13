@@ -49,7 +49,7 @@ const Main = () => {
       <section>
         <div>
           <h1
-            className={`${bose.className} text-6xl font-extrabold mt-24 mx-24 subpixel-antialiased`}
+            className={`${bose.className} text-6xl font-extrabold mt-8 mx-24 subpixel-antialiased`}
           >
             Trending products
           </h1>
@@ -308,7 +308,7 @@ const Main = () => {
             </form>
           </div>
           <p
-            className={`${boseText.className} text-xs font-semibold mt-10 w-[700px] mb-36`}
+            className={`${boseText.className} text-xs font-semibold mt-10 w-[700px]`}
           >
             *The coupon code will be sent via email. Offer valid for full-priced
             products with a maximum discount of $100. Please see email for full

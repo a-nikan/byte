@@ -1,23 +1,21 @@
-import { clsx, type ClassValue } from "clsx";
-import { twMerge } from "tailwind-merge";
-
-export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs));
-}
+"use client";
 
 import { useState, useEffect, useRef } from "react";
 
-const useScrollDirection = () => {
-  const [isScrollingUp, setIsScrollingUp] = useState(false);
+// Scroll Direction Detector Hook
+
+export const useScrollDirection = () => {
+  const [isScrollingUp, setIsScrollingUp] = useState(true);
   const lastScrollY = useRef(0); // Persist lastScrollY across renders
 
   useEffect(() => {
     const handleScroll = () => {
+      const currentScrollY = window.scrollY;
       if (window.scrollY < lastScrollY.current) {
         // User is scrolling up
         setIsScrollingUp(true);
-      } else {
-        // User is scrolling down
+      } else if (currentScrollY > lastScrollY.current && currentScrollY > 0) {
+        // User is scrolling down and they are not at the top of the page
         setIsScrollingUp(false);
       }
       lastScrollY.current = window.scrollY; // Update lastScrollY using useRef
@@ -32,5 +30,3 @@ const useScrollDirection = () => {
 
   return isScrollingUp;
 };
-
-export default useScrollDirection;
